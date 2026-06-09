@@ -25,18 +25,22 @@ type OpenWindow = {
   offset: number
 }
 
+const ABOUT_WINDOW_ID = "about-default"
+
 const DESKTOP_ITEMS = [
   { id: "about", label: "About Me", type: "about" as const, icon: NotepadIcon },
   { id: "experience", label: "Work Experience", type: "experience" as const, icon: BriefcaseIcon },
 ]
 
 export function Desktop() {
-  const [selected, setSelected] = useState<string | null>(null)
-  const [windows, setWindows] = useState<OpenWindow[]>([])
-  const [topZ, setTopZ] = useState(10)
-  const [activeId, setActiveId] = useState<string | null>(null)
+  const [selected, setSelected] = useState<string | null>("about")
+  const [windows, setWindows] = useState<OpenWindow[]>([
+    { id: ABOUT_WINDOW_ID, type: "about", z: 11, offset: 0 },
+  ])
+  const [topZ, setTopZ] = useState(11)
+  const [activeId, setActiveId] = useState<string | null>(ABOUT_WINDOW_ID)
   const [startOpen, setStartOpen] = useState(false)
-  const [openCount, setOpenCount] = useState(0)
+  const [openCount, setOpenCount] = useState(1)
 
   function openWindow(type: WindowType, repoName?: string) {
     const windowKey = type === "repo" ? repoName! : type

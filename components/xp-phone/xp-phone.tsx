@@ -18,7 +18,7 @@ type Screen =
   | { type: "project"; name: string }
 
 export function XpPhone() {
-  const [stack, setStack] = useState<Screen[]>([{ type: "home" }])
+  const [stack, setStack] = useState<Screen[]>([{ type: "about" }])
 
   const screen = stack[stack.length - 1]
   const isHome = screen.type === "home"
