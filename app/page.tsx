@@ -1,5 +1,5 @@
-import { Desktop } from "@/components/desktop"
+import { PortfolioShell } from "@/components/portfolio-shell"
 
 export default function Page() {
-  return <Desktop />
+  return <PortfolioShell />
 }

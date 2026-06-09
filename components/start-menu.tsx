@@ -22,7 +22,7 @@ export function StartMenu({ open, onClose, onOpenAbout, onOpenExperience }: Prop
     <>
       <div className="fixed inset-0 z-[9998]" onClick={onClose} aria-hidden="true" />
       <div className="xp-start-menu absolute bottom-10 left-0 z-[9999] flex w-[380px] overflow-hidden border border-[#0831d9] shadow-2xl">
-        {/* Left pane — pinned programs */}
+        {/* Left pane - pinned programs */}
         <div className="flex flex-1 flex-col bg-white">
           <div className="flex items-center gap-2 bg-gradient-to-b from-[#1f6dd6] to-[#1750bb] px-3 py-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-md border border-white/40 bg-gradient-to-br from-[#ffd25e] to-[#e8a23d] font-tahoma text-[18px] font-bold text-white shadow-inner">
@@ -94,7 +94,7 @@ export function StartMenu({ open, onClose, onOpenAbout, onOpenExperience }: Prop
               </p>
             </div>
 
-            {/* Right pane — places & links */}
+            {/* Right pane - places & links */}
             <div className="xp-start-right w-[140px] bg-gradient-to-b from-[#3f8cf3] to-[#1941a5] px-2 py-3 font-tahoma text-[11px] text-white">
               <p className="mb-2 px-1 text-[12px] font-bold">My Documents</p>
               <button

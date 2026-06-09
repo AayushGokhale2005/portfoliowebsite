@@ -58,7 +58,7 @@ export const profile = {
 export const aboutMe = {
   summary: `Hi! I'm Aayush Gokhale, a Computer Science student at Rutgers University (Class of 2027) passionate about building reliable systems at the intersection of data engineering, machine learning, and cloud infrastructure.`,
   paragraphs: [
-    "I enjoy taking projects from raw data to production — whether that's designing CI/CD pipelines on GCP, building ETL workflows over millions of financial records, or applying deep learning to microscopy images in a research lab.",
+    "I enjoy taking projects from raw data to production, whether that's designing CI/CD pipelines on GCP, building ETL workflows over millions of financial records, or applying deep learning to microscopy images in a research lab.",
     "My experience spans DevOps, data engineering, ML research, and analytics. I like writing clean Python, shipping containerized services, and making technical work understandable for teammates and stakeholders.",
     "When I'm not coding, you'll find me exploring new repos, refining side projects like AskDocs (a C++ code editor), or learning more about cloud-native tooling.",
   ],

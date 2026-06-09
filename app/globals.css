@@ -149,15 +149,12 @@
   font-family: var(--xp-font);
 }
 
-/* Bliss-inspired desktop wallpaper */
+/* Windows XP Bliss wallpaper */
 .xp-desktop {
-  background:
-    radial-gradient(ellipse 120% 80% at 50% 100%, #6b8e23 0%, #4a7c10 25%, transparent 55%),
-    radial-gradient(ellipse 90% 60% at 30% 85%, #7cb342 0%, transparent 50%),
-    radial-gradient(ellipse 80% 50% at 70% 90%, #558b2f 0%, transparent 45%),
-    linear-gradient(180deg, #87ceeb 0%, #5dade2 35%, #85c1e9 60%, #a9dfbf 85%, #7dcea0 100%);
+  background-image: url(/bliss.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Beveled XP window chrome */
@@ -278,4 +275,95 @@
   background: #ece9d8;
   border: 1px solid #888;
   height: 16px;
+}
+
+/* ===== XP Phone (Windows Phone + XP hybrid) ===== */
+.xp-phone {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.4) 100%),
+    url(/bliss.png) center / cover no-repeat;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.xp-phone-status {
+  background: linear-gradient(to bottom, #1f6dd6, #1750bb);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.xp-phone-appbar {
+  background: linear-gradient(
+    to bottom,
+    #0058ee 0%,
+    #3593ff 20%,
+    #245edb 70%,
+    #1941a5 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.xp-phone-start {
+  min-height: 100%;
+}
+
+.xp-phone-navbar {
+  background: linear-gradient(
+    to bottom,
+    #3f8cf3 0%,
+    #2461db 50%,
+    #1941a5 100%
+  );
+  border-top: 1px solid #5b94f3;
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0));
+}
+
+.xp-phone-start-btn {
+  background: radial-gradient(circle at 30% 30%, #5bbd5b, #3c993c);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.xp-phone-tile {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.35),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease, filter 0.1s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.xp-phone-tile:active {
+  transform: scale(0.97);
+  filter: brightness(0.95);
+}
+
+.xp-phone-tile-blue {
+  background: linear-gradient(135deg, #3593ff 0%, #245edb 50%, #1941a5 100%);
+}
+.xp-phone-tile-green {
+  background: linear-gradient(135deg, #5bbd5b 0%, #3c993c 50%, #2a7a2a 100%);
+}
+.xp-phone-tile-gold {
+  background: linear-gradient(135deg, #ffd25e 0%, #f5b916 50%, #d99a13 100%);
+  color: #1a1a1a;
+}
+.xp-phone-tile-gold p {
+  color: #1a1a1a !important;
+  text-shadow: none;
+}
+.xp-phone-tile-silver {
+  background: linear-gradient(135deg, #e8e8e8 0%, #b0b0b0 50%, #888 100%);
+  color: #1a1a1a;
+}
+.xp-phone-tile-silver p {
+  color: #1a1a1a !important;
+  text-shadow: none;
+}
+.xp-phone-tile-orange {
+  background: linear-gradient(135deg, #ffb347 0%, #e8a23d 50%, #c97b1a 100%);
+}
+
+.xp-phone-app-body {
+  border-top: 2px solid #0831d9;
 }

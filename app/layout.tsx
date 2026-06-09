@@ -10,10 +10,16 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Aayush Gokhale — Desktop',
+  title: 'Aayush Gokhale | Desktop',
   description:
-    'A Windows XP–style desktop portfolio. Open project folders in Internet Explorer to explore Aayush Gokhale’s Codeberg repositories.',
+    "A Windows XP-style desktop portfolio. Open project folders in Internet Explorer to explore Aayush Gokhale on Codeberg.",
   generator: 'v0.app',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover' as const,
 }
 
 export default function RootLayout({

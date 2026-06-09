@@ -1,7 +1,8 @@
 "use client"
 
-import { workExperience, profile } from "@/lib/portfolio-data"
+import { profile, workExperience } from "@/lib/portfolio-data"
 import { BriefcaseIcon } from "@/components/xp-icons"
+import { ExperienceContent } from "@/components/content/experience-content"
 import { XpWindowShell } from "@/components/xp-window-shell"
 
 type Props = {
@@ -64,35 +65,7 @@ export function ExperienceWindow({ zIndex, initialOffset, active, onFocus, onClo
           <span>Tools</span>
           <span>Help</span>
         </div>
-
-        <div className="space-y-3">
-          {workExperience.map((job, idx) => (
-            <div
-              key={idx}
-              className="rounded-sm border border-[#919b9c] bg-white p-3 shadow-[inset_1px_1px_0_#fff]"
-            >
-              <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
-                <div>
-                  <h2 className="font-tahoma text-[14px] font-bold text-[#0033cc]">{job.title}</h2>
-                  <p className="font-tahoma text-[12px] text-[#333]">
-                    {job.company} · {job.location}
-                  </p>
-                </div>
-                <span className="rounded-sm border border-[#aca899] bg-[#ece9d8] px-2 py-0.5 font-tahoma text-[11px] text-[#555]">
-                  {job.period}
-                </span>
-              </div>
-              <ul className="list-none space-y-1 pl-1 font-tahoma text-[12px] text-[#333]">
-                {job.bullets.map((bullet, bi) => (
-                  <li key={bi} className="flex gap-2 leading-relaxed">
-                    <span className="shrink-0 text-[#0033cc]">▸</span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <ExperienceContent />
       </div>
     </XpWindowShell>
   )

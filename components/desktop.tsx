@@ -86,7 +86,7 @@ export function Desktop() {
         }
       }}
     >
-      {/* Desktop icons — single column like classic XP */}
+      {/* Desktop icons - single column like classic XP */}
       <div className="absolute left-3 top-3 flex flex-col gap-3">
         {DESKTOP_ITEMS.map((item) => (
           <DesktopIcon
@@ -111,7 +111,7 @@ export function Desktop() {
         ))}
       </div>
 
-      {/* Recycle Bin — bottom-right like XP */}
+      {/* Recycle Bin - bottom-right like XP */}
       <div className="absolute bottom-12 right-3">
         <DesktopIcon
           label="Recycle Bin"
